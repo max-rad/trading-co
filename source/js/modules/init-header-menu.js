@@ -2,7 +2,7 @@ import {ScrollLock} from '../utils/scroll-lock.js';
 
 const scrollLock = new ScrollLock();
 const menu = document.querySelector('[data-menu]');
-const menuToggle = document.querySelector('[data-menu-toggle]')
+const menuToggle = document.querySelector('[data-menu-toggle]');
 const breakpointMedia = window.matchMedia('(min-width: 768px)');
 
 const openMenu = () => {
@@ -26,7 +26,7 @@ const breakpointChecker = () => {
 
 const initHeaderMenu = () => {
   if (!menu) {
-    return
+    return;
   }
 
   if (menuToggle) {
