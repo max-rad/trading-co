@@ -1,0 +1,14 @@
+mixin intro()
+  section.intro
+    .container
+      .intro__wrapper
+        .intro__content-wrapper
+          h1.intro__title Trade
+            =" "
+            span comfortably
+          +btn({text: "Start Trading", type: "button"}).btn--medium.intro__button
+        .intro__image-wrapper
+          picture
+            source(media="(min-width:1024px)", srcset="img/content/intro/intro-background-desktop.png")
+            source(media="(min-width:768px)", srcset="img/content/intro/intro-background-tablet.png")
+            img(src="img/content/intro/intro-background.png", width=388, height=388, alt="Phone in the form of a pillow")

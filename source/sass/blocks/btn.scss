@@ -1,0 +1,89 @@
+.btn {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  border: 2px solid $color-transparent;
+  border-radius: 8px;
+  background-image: linear-gradient($color-black-pearl, $color-black-pearl), radial-gradient(circle at top left, $color-peach, $color-dark-orchid);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  background-color: $color-transparent;
+  color: $color-default-white;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: opacity $trans-default;
+
+  @include vp-768 {
+    padding: 10px 22px;
+  }
+
+  &--medium {
+    padding: 14px 36px;
+
+    font-size: 24px;
+    line-height: 28px;
+
+    border-radius: 16px;
+
+    @include vp-768 {
+      padding: 16px 36px;
+    }
+
+    @include vp-1024 {
+      padding: 14px 36px;
+
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &--white {
+    padding: 10px 22px 10px 30px;
+
+    letter-spacing: 0.02em;
+
+    border: 2px solid $color-default-white;
+    border-radius: 12px;
+
+    background-image: unset;
+    background-origin: unset;
+    background-clip: unset;
+
+    @include vp-768 {
+      padding: 10px 22px 10px 30px;
+    }
+
+    @include vp-1024 {
+      padding: 10px 22px 10px 28px;
+    }
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+
+    color: inherit;
+
+    @include vp-1024 {
+      margin-left: 10px;
+    }
+  }
+}

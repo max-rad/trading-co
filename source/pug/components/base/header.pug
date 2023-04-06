@@ -1,0 +1,46 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "#",
+        text: "Home"
+      },
+      {
+        href: "#",
+        text: "Trading",
+        isActive: true
+      },
+      {
+        href: "#",
+        text: "Apps"
+      },
+      {
+        href: "#",
+        text: "About"
+      }
+    ]
+
+  header.header(class=headerMods data-menu)
+    .container
+      .header__wrapper
+        button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-menu-toggle).btn-reset.header__toggle
+          +icon("icon-burger", 16, 12).header__icon.header__icon--burger
+          +icon("icon-close", 16, 12).header__icon.header__icon--close
+
+        if(currentUrl === "index.html")
+          span.header__logo
+            picture
+              source(media="(min-width:768px)", srcset="img/svg/logo-tablet.svg")
+              img(src="img/svg/logo-mobile.svg", width=45, height=24, alt="TradingCo logo")
+        else
+          a.header__logo(href="index.html", aria-label="Переход на главную")
+            picture
+              source(media="(min-width:768px)", srcset="img/svg/logo-tablet.svg")
+              img(src="img/svg/logo-mobile.svg", width=45, height=24, alt="TradingCo logo")
+        nav.header__nav.main-nav
+          ul.main-nav__list
+            each item in headerLinks
+              li.main-nav__item
+                a.main-nav__link(class={"is-active" : item.isActive} href=item.href)!=item.text
+          +socials()
+        +btn({text: "Registration", type: "button"}).header__button

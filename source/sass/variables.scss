@@ -1,0 +1,57 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black:           #000000;
+$color-default-white:           #ffffff;
+$color-transparent:             rgba(255, 255, 255, 0);
+
+// Project palette
+
+$color-black-pearl:             #08090a;
+$color-black-pearl-2:           #0b0d0f;
+$color-grey:                    #777777;
+$color-peach:                   #ffd0a5;
+$color-dark-orchid:             #8c44d4;
+
+// Gradient
+
+$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
+// Typography
+// ---------------------------------
+
+$fz-default: 16px;
+
+$ff-roboto: "Roboto", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$tf-ease-out:                       ease-out;
+$tf-ease-in:                        ease-in;
+$tf-ease-in-out:                    ease-in-out;
+$trans-default:                     0.3s $tf-default;
+$trans-ease-out:                    0.3s $tf-ease-out;
+$trans-ease-in:                     0.3s $tf-ease-in;
+$trans-ease-in-out:                 0.3s $tf-ease-in-out;
+
+// Viewports
+// ---------------------------------
+
+$vp-320:                            320px;
+$vp-375:                            375px;
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1280:                           1280px;
+$vp-1340:                           1340px;
+$vp-1440:                           1440px;
+$vp-1920:                           1920px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

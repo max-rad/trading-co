@@ -1,0 +1,32 @@
+mixin socials()
+  -
+    const list = [
+      {
+        href: "#",
+        label: "Youtube",
+        src: "icon-youtube",
+        width: 32,
+        height: 32
+      },
+      {
+        href: "#",
+        label: "Instagram",
+        src: "icon-instagram",
+        width: 32,
+        height: 32
+      },
+      {
+        href: "#",
+        label: "Facebook",
+        src: "icon-facebook",
+        width: 32,
+        height: 32
+      }
+    ]
+
+  .socials
+    .socials__list
+      each item in list
+        .socials__item
+          a.socials__link(href=item.href aria-label=item.label)
+            +icon(item.src, item.width, item.height)

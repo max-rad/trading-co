@@ -1,0 +1,39 @@
+mixin features()
+  -
+    const list = [
+      {
+        src: "icon-platform",
+        width: 56,
+        height: 56,
+        text: "Join TradingCo and feel the&nbsp;confidence of&nbsp;trading on&nbsp;a&nbsp;modern platform"
+      },
+      {
+        src: "icon-protection",
+        width: 56,
+        height: 56,
+        text: "Enjoy peace of&nbsp;mind with tools that protect your investments"
+      },
+      {
+        src: "icon-verification",
+        width: 56,
+        height: 56,
+        text: "Start trading stress-free with TradingCo"
+      }
+    ]
+
+  section.features
+    .container
+      .features__wrapper
+        .features__content-wrapper
+          h2.features__title Your trading comfort zone
+          ul.features__list
+            each item in list
+              li.features__item
+                +icon(item.src, item.width, item.height).features__icon
+                p.features__text!=item.text
+          +btn({text: "Learn more", type: "button", icon: {name: "icon-arrow", width: 24, height: 24}}).btn--white.features__button
+        .features__image-wrapper
+          picture
+            source(media="(min-width:1024px)", srcset="img/content/features/man-with-phone-desktop.png")
+            source(media="(min-width:768px)", srcset="img/content/features/man-with-phone-tablet.png")
+            img(src="img/content/features/man-with-phone.png", width=314, height=400, alt="Man with phone")

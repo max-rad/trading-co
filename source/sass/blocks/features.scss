@@ -1,0 +1,240 @@
+.features {
+  position: relative;
+  overflow: hidden;
+
+  @include vp-1024 {
+    overflow: inherit;
+  }
+
+  .container {
+    @include vp-1024 {
+      padding: 0;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 40px 8px 368px;
+
+    background: linear-gradient(0deg, $color-peach -14.88%, $color-dark-orchid 51.56%);
+    border-radius: 40px;
+
+    @include vp-768 {
+      padding: 56px 36px 400px;
+
+      border-radius: 80px;
+    }
+
+    @include vp-1024 {
+      overflow: inherit;
+
+      background: linear-gradient(73.67deg, $color-peach 2.65%, $color-dark-orchid 52.64%);
+    }
+
+    @include vp-1024 {
+      padding: 80px 24px 0;
+    }
+
+    @include vp-1280 {
+      padding: 80px 34px 80px;
+    }
+
+    @include vp-1340 {
+      padding: 80px 116px;
+    }
+  }
+
+  &__content-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include vp-1024 {
+      align-items: flex-start;
+      max-width: 450px;
+      margin-left: 36px;
+    }
+
+    @include vp-1280 {
+      max-width: 496px;
+      margin-left: auto;
+    }
+  }
+
+  &__title {
+    max-width: 290px;
+    margin: 0 0 40px;
+
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+
+    color: $color-default-white;
+
+    @include vp-768 {
+      max-width: 480px;
+
+      font-size: 56px;
+      line-height: 64px;
+    }
+
+    @include vp-1024 {
+      margin: 0 0 64px;
+
+      text-align: start;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 52px;
+    padding: 0;
+
+    list-style: none;
+
+    @include vp-768 {
+      display: grid;
+      grid-template-columns: 200px 200px 200px;
+      align-items: flex-start;
+      column-gap: 24px;
+      row-gap: 24px;
+      margin: 0 0 40px;
+    }
+
+    @include vp-1024 {
+      display: flex;
+      flex-direction: column;
+      column-gap: 0;
+      row-gap: 0;
+      margin: 0 0 32px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    margin-bottom: 24px;
+
+    @include vp-768 {
+      margin-bottom: 0;
+    }
+
+    @include vp-1024 {
+      flex-direction: row;
+      max-width: unset;
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+
+    width: 56px;
+    height: 56px;
+    margin-bottom: 24px;
+
+    @include vp-1024 {
+      margin: 0 24px 0 0;
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    color: $color-default-white;
+
+    @include vp-1024 {
+      font-size: 20px;
+      line-height: 32px;
+      text-align: start;
+    }
+  }
+
+  &__button {
+    margin-bottom: 40px;
+
+    @include vp-768 {
+      margin-bottom: 48px;
+    }
+
+    @include vp-1024 {
+      margin: 32px 0 0;
+    }
+  }
+
+  &__image-wrapper {
+    position: absolute;
+    bottom: -16px;
+
+    width: 314px;
+    height: 400px;
+
+    @include vp-768 {
+      bottom: -44px;
+
+      width: 537px;
+      height: 480px;
+    }
+
+    @include vp-1024 {
+      order: -1;
+      position: relative;
+      bottom: 0;
+
+      width: 490px;
+      height: 670px;
+    }
+
+    @include vp-1280 {
+      order: 1;
+      position: absolute;
+      left: 34px;
+
+      width: 600px;
+      height: 824px;
+    }
+
+    @include vp-1340 {
+      left: 108px;
+    }
+
+    img {
+      width: 314px;
+      height: 400px;
+
+      object-fit: contain;
+
+      @include vp-768 {
+        width: 537px;
+        height: 480px;
+      }
+
+      @include vp-1024 {
+        width: 490px;
+        height: 670px;
+      }
+
+      @include vp-1280 {
+        width: 600px;
+        height: 824px;
+      }
+    }
+  }
+}
