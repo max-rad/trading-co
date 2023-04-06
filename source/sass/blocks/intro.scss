@@ -84,6 +84,8 @@
     height: 388px;
     margin: 0 -194px;
 
+    user-select: none;
+
     @include vp-768 {
       top: 280px;
 

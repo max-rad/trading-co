@@ -71,6 +71,8 @@
     height: 24px;
     margin-right: 16px;
 
+    user-select: none;
+
     @include vp-768 {
       width: 113px;
       height: 24px;
